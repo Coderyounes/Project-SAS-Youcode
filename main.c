@@ -4,6 +4,7 @@ int main()
 {
     int choix, select, id;
     char *departments[] = {INFO, MECH, RH, JUR};
+    Etudiant_s temp;
     do
     {
         Welcome();
@@ -52,7 +53,19 @@ int main()
                 clear_buffer();
                 continue;
             }
-            modification(id);
+            printf("Entre le nouveau Nom: ");
+            scanf("%s", temp.nom);
+            printf("Entre le nouveau prenom: ");
+            scanf("%s", temp.prenom);
+            printf("Entre la nouveau note: ");
+            scanf("%f", &temp.note);
+            printf("Entre la nouveau date de naissance: ");
+            scanf("%s", temp.naissance);
+            printf("Entree la nouveau departement:\n(1): informatique\n(2): mechanique\n(3): resource_humaine\n(4): juridique\nChoisir: ");
+            scanf("%d", &choix);
+            strcpy(temp.departement, departments[choix - 1]);
+            modification(id, temp);
+            affichertous();
             break;
         case 4:
             break;

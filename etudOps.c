@@ -58,6 +58,41 @@ void affichertous()
     fclose(fp);
 }
 
-void modification(int id)
+void modification(int id, Etudiant_s nouveau)
 {
+    char buffer[MAX];
+    int lines;
+    Etudiant_s etudiant;
+    FILE *fp, *temp;
+
+    fp = fileops(file, "r");
+    temp = fileops("temp.txt", "a");
+    while (fgets(buffer, sizeof(buffer), fp) != NULL)
+    {
+        sscanf(buffer, "%d %s %s %s %s %f", &etudiant.uniqueId,
+               etudiant.nom,
+               etudiant.prenom,
+               etudiant.naissance,
+               etudiant.departement,
+               &etudiant.note);
+        if (etudiant.uniqueId == id)
+        {
+            strcpy(etudiant.nom, nouveau.nom);
+            strcpy(etudiant.prenom, nouveau.prenom);
+            strcpy(etudiant.naissance, nouveau.naissance);
+            strcpy(etudiant.departement, nouveau.departement);
+            etudiant.note = nouveau.note;
+        }
+
+        fprintf(temp, "%d %s %s %s %s %.2f\n", etudiant.uniqueId,
+                etudiant.nom,
+                etudiant.prenom,
+                etudiant.naissance,
+                etudiant.departement,
+                etudiant.note);
+    }
+    fclose(fp);
+    fclose(temp);
+    remove(file);
+    rename("temp.txt", file);
 }
