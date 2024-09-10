@@ -26,6 +26,8 @@ void ajouteEtudiant(char departemet[]);
 void affichertous();
 void modification(int id, Etudiant_s temp);
 void removeEtudiant(int id);
+int totaletudiant();
+int totalBydeprtement(char departement[]);
 
 FILE *fileops(char filename[], char mode[]);
 
