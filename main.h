@@ -21,6 +21,8 @@ typedef struct etudiant
 	int note;
 } Etudiant_s;
 
+FILE *fileops(char filename[], char mode[]);
+
 void Welcome();
 
 #endif

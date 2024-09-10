@@ -28,10 +28,13 @@ int main()
         case 4:
             break;
         case 5:
+            // statistique sous Menu
             break;
         case 6:
+            // recherche sous-Menu
             break;
         case 7:
+            // tri sous-Menu
             break;
         case 0:
             printf("Quitting.....\n");
