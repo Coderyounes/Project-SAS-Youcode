@@ -25,6 +25,8 @@ typedef struct etudiant
 void ajouteEtudiant(char departemet[]);
 void affichertous();
 void modification(int id, Etudiant_s temp);
+void removeEtudiant(int id);
+
 FILE *fileops(char filename[], char mode[]);
 
 int countlines(FILE *fp);

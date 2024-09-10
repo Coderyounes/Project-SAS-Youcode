@@ -68,6 +68,21 @@ int main()
             affichertous();
             break;
         case 4:
+            affichertous();
+            printf("Quel letudiant que vous voulez supprimer: ");
+            if (scanf("%d", &id) != 1)
+            {
+                clear_buffer();
+                continue;
+            }
+            if (id < 1)
+            {
+                printf("Selection incorrect\n");
+                clear_buffer();
+                continue;
+            }
+            removeEtudiant(id);
+            affichertous();
             break;
         case 5:
             // statistique sous Menu

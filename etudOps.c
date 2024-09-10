@@ -96,3 +96,39 @@ void modification(int id, Etudiant_s nouveau)
     remove(file);
     rename("temp.txt", file);
 }
+
+void removeEtudiant(int id)
+{
+    char buffer[MAX];
+    int lines;
+    Etudiant_s etudiant;
+    FILE *fp, *temp;
+
+    fp = fileops(file, "r");
+    temp = fileops("temp.txt", "a");
+    while (fgets(buffer, sizeof(buffer), fp) != NULL)
+    {
+        if (etudiant.uniqueId > id)
+        {
+            fprintf(temp, "%d %s %s %s %s %.2f\n", etudiant.uniqueId - 1,
+                    etudiant.nom,
+                    etudiant.prenom,
+                    etudiant.naissance,
+                    etudiant.departement,
+                    etudiant.note);
+        }
+        else if (etudiant.uniqueId != id)
+        {
+            fprintf(temp, "%d %s %s %s %s %.2f\n", etudiant.uniqueId,
+                    etudiant.nom,
+                    etudiant.prenom,
+                    etudiant.naissance,
+                    etudiant.departement,
+                    etudiant.note);
+        }
+    }
+    fclose(fp);
+    fclose(temp);
+    remove(file);
+    rename("temp.txt", file);
+}
