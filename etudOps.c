@@ -29,3 +29,31 @@ void ajouteEtudiant(char departemet[])
     fclose(fp);
     fclose(tfp);
 }
+
+void affichertous()
+{
+    char buffer[MAX];
+    int lines;
+    Etudiant_s etudiant;
+    FILE *fp;
+
+    fp = fileops(file, "r");
+    lines = countlines(fp);
+    while (fgets(buffer, sizeof(buffer), fp) != NULL)
+    {
+        sscanf(buffer, "%d %s %s %s %s %f", &etudiant.uniqueId,
+               etudiant.nom,
+               etudiant.prenom,
+               etudiant.naissance,
+               etudiant.departement,
+               &etudiant.note);
+
+        printf("%d %s %s %s %s %.2f\n", etudiant.uniqueId,
+               etudiant.nom,
+               etudiant.prenom,
+               etudiant.naissance,
+               etudiant.departement,
+               etudiant.note);
+    }
+    fclose(fp);
+}

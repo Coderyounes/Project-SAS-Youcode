@@ -36,6 +36,7 @@ int main()
             ajouteEtudiant(departments[select - 1]);
             break;
         case 2:
+            affichertous();
             break;
         case 3:
             break;
