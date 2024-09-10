@@ -25,10 +25,9 @@ int countlines(FILE *fp)
 {
     char buffer[MAX];
     int count = 0;
-    printf("I try to count lines");
+
     while (fgets(buffer, sizeof(buffer), fp))
     {
-        printf("my count is working\n");
         count++;
     }
     rewind(fp);
