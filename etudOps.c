@@ -57,3 +57,7 @@ void affichertous()
     }
     fclose(fp);
 }
+
+void modification(int id)
+{
+}

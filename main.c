@@ -2,7 +2,7 @@
 
 int main()
 {
-    int choix, select;
+    int choix, select, id;
     char *departments[] = {INFO, MECH, RH, JUR};
     do
     {
@@ -39,6 +39,20 @@ int main()
             affichertous();
             break;
         case 3:
+            affichertous();
+            printf("Quel etudiant vous voulez modifie? ( Entree le id)");
+            if (scanf("%d", &id) != 1)
+            {
+                clear_buffer();
+                continue;
+            }
+            if (id < 1)
+            {
+                printf("Selection incorrect\n");
+                clear_buffer();
+                continue;
+            }
+            modification(id);
             break;
         case 4:
             break;
