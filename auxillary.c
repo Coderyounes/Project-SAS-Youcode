@@ -12,3 +12,16 @@ void Welcome()
     printf("7: Calculer des Statistique\n");
     printf("0: Quitter le Program\n");
 }
+
+int countlines(FILE *fp)
+{
+    char buffer[MAX];
+    int count = 0;
+
+    while (fgets(buffer, sizeof(buffer), fp))
+    {
+        count++;
+    }
+    rewind(fp);
+    return count;
+}

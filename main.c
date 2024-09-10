@@ -18,8 +18,7 @@ int main()
         switch (choix)
         {
         case 1:
-            printf("%d\n", choix);
-            printf("Test Here\n");
+            ajouteEtudiant();
             break;
         case 2:
             break;
