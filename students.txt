@@ -1,3 +1,7 @@
 1 younes bous 1996 informatique 15.85
 1 tttt bous 1996 mechanique 15.85
 1 younes bousfiha 1996 informatique 15.63
+1 tttt tttt 1996 informatique 19.58
+1 0 tttt 1996 informatique 19.58
+1 bousfiha younes 1996 informatique 195.85
+1 hello hello 1992 informatique 15.68
