@@ -1,6 +1,6 @@
 #include "main.h"
 
-void ajouteEtudiant()
+void ajouteEtudiant(char departemet[])
 {
     char buffer[MAX];
     int lines;
@@ -14,14 +14,14 @@ void ajouteEtudiant()
     if (fgets(buffer, sizeof(buffer), stdin) != NULL)
     {
         etudiant.uniqueId = lines + 1;
-        // strcpy(etudiant.departement, depart);
-        sscanf(buffer, "%s %s %s %d", etudiant.nom, etudiant.prenom, etudiant.naissance, &etudiant.note);
+        strcpy(etudiant.departement, departemet);
+        sscanf(buffer, "%s %s %s %f", etudiant.nom, etudiant.prenom, etudiant.naissance, &etudiant.note);
     }
-    fprintf(fp, "%d %s %s %s %d", etudiant.uniqueId,
+    fprintf(fp, "\n%d %s %s %s %s %.2f", etudiant.uniqueId,
             etudiant.nom,
             etudiant.prenom,
             etudiant.naissance,
-            /*etudiant.departement*/
+            etudiant.departement,
             etudiant.note);
     fclose(fp);
 }

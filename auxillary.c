@@ -13,6 +13,14 @@ void Welcome()
     printf("0: Quitter le Program\n");
 }
 
+void clear_buffer()
+{
+    int c;
+    printf("Invalid input\n");
+    while ((c = getchar()) != '\n')
+        ;
+}
+
 int countlines(FILE *fp)
 {
     char buffer[MAX];

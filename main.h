@@ -18,14 +18,15 @@ typedef struct etudiant
 	char nom[MAX];
 	char prenom[MAX];
 	char naissance[MAX];
-	// char departement[MAX];
-	int note;
+	char departement[MAX];
+	float note;
 } Etudiant_s;
 
-void ajouteEtudiant();
+void ajouteEtudiant(char departemet[]);
 FILE *fileops(char filename[], char mode[]);
 
 int countlines(FILE *fp);
 void Welcome();
+void clear_buffer();
 
 #endif
