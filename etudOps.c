@@ -9,8 +9,9 @@ void ajouteEtudiant(char departemet[])
 
     fp = fileops(file, "a");
     lines = countlines(fp);
+    printf("lines now are: %d\n", lines);
     getchar();
-    printf("Enter le nom, le prenom, la date de naissance et la note(separe par espace)");
+    printf("Enter le nom, le prenom, la date de naissance et la note(separe par espace): ");
     if (fgets(buffer, sizeof(buffer), stdin) != NULL)
     {
         etudiant.uniqueId = lines + 1;
