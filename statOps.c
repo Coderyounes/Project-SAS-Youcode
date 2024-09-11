@@ -14,7 +14,7 @@ int totaletudiant()
 int totalBydeprtement(char departement[])
 {
     char buffer[MAX];
-    int counteur;
+    int counteur = 0;
     Etudiant_s etudiant;
     FILE *fp;
 
@@ -30,6 +30,7 @@ int totalBydeprtement(char departement[])
 
         if (strcmp(etudiant.departement, departement) == 0)
         {
+            printf("%s\n", departement);
             counteur++;
         }
     }
