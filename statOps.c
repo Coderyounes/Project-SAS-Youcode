@@ -64,6 +64,9 @@ float moyenneGlobal()
     return (total / lines);
 }
 
+float moyennePardeptment(char departement[])
+{
+}
 void statsMenu()
 {
     int choix, select, total;
@@ -94,10 +97,10 @@ void statsMenu()
     {
         printf("le moyenne General de l'universite est %.2f\n", moyenneGlobal());
     }
-    /*else if (choix == 4)
+    else if (choix == 4)
     {
     }
-    else if (choix == 5)
+    /*else if (choix == 5)
     {
     } else if (choix == 6) {
 
