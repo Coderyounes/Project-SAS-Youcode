@@ -106,7 +106,6 @@ void removeEtudiant(int id)
 
     fp = fileops(file, "r");
     temp = fileops("temp.txt", "a");
-    printf("The id to remove %d\n", id);
     while (fgets(buffer, sizeof(buffer), fp) != NULL)
     {
         sscanf(buffer, "%d %s %s %s %s %f", &etudiant.uniqueId,

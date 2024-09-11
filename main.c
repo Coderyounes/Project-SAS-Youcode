@@ -85,13 +85,13 @@ int main()
             affichertous();
             break;
         case 5:
-            // statistique sous Menu
+            // recherche
             break;
         case 6:
-            // recherche sous-Menu
+            // tri sous menu
             break;
         case 7:
-            // tri sous-Menu
+            statsMenu();
             break;
         case 0:
             printf("Quitting.....\n");
