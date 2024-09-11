@@ -51,5 +51,5 @@ void Welcome();
 void clear_buffer();
 void printArray(Etudiant_s etudiants[], int lines);
 void triforTop(Etudiant_s etudiants[], int lines);
-int handlenotes(float note);
+
 #endif
