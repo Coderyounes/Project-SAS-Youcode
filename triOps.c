@@ -62,6 +62,36 @@ void triZaA(Etudiant_s etudiants[],  int lines) {
     printArray(etudiants, lines);
 }
 
+void triparstatus(Etudiant_s etudiants[], int lines) {
+    int i, j;
+    float seuil = 10.00;
+    
+    printf("Etudiant Reussite: \n");
+    for (i = 0; i < lines; i++) {
+      if( etudiants[i].note >= seuil) {
+        printf("%d %s %s %s %s %.2f\n", etudiants[i].uniqueId,
+                                        etudiants[i].nom,
+                                        etudiants[i].prenom,
+                                        etudiants[i].naissance,
+                                        etudiants[i].departement,
+                                        etudiants[i].note);
+      }  
+    }
+    printf("=================================================");
+    printf("\n");
+    printf("Etudiant non Reussite: \n");
+    for(j = 0; j < lines; j++) {
+      if( etudiants[j].note <= seuil) {
+        printf("%d %s %s %s %s %.2f\n", etudiants[j].uniqueId,
+                                        etudiants[j].nom,
+                                        etudiants[j].prenom,
+                                        etudiants[j].naissance,
+                                        etudiants[j].departement,
+                                        etudiants[j].note);
+      }  
+    }
+}
+
 
 void triMenu() {
     char buffer[MAX];
@@ -102,7 +132,7 @@ void triMenu() {
     } else if (select == 4) {
         triLowtoHigh(etudiants, lines);
     } else if (select == 5) {
-        // triReusit();
+        triparstatus(etudiants, lines);
     }
     fclose(fp);
     free(etudiants);

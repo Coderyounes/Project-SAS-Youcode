@@ -43,6 +43,7 @@ void triMenu();
 void triHightoLow(Etudiant_s etudiants[], int lines);
 void triAaZ(Etudiant_s etudiants[], int lines);
 void triZaA(Etudiant_s etudiants[], int lines);
+void triparstatus(Etudiant_s etudiants[], int lines);
 FILE *fileops(char filename[], char mode[]);
 
 int countlines(FILE *fp);
