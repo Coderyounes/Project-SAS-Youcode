@@ -66,6 +66,30 @@ float moyenneGlobal()
 
 float moyennePardeptment(char departement[])
 {
+    char buffer[MAX];
+    float total = 0, count = 0;
+    int lines;
+    Etudiant_s etudiant;
+    FILE *fp;
+
+    fp = fileops(file, "r");
+    lines = countlines(fp);
+    while (fgets(buffer, sizeof(buffer), fp) != NULL)
+    {
+        sscanf(buffer, "%d %s %s %s %s %f", &etudiant.uniqueId,
+               etudiant.nom,
+               etudiant.prenom,
+               etudiant.naissance,
+               etudiant.departement,
+               &etudiant.note);
+        if (strcmp(etudiant.departement, departement) == 0)
+        {
+            total += etudiant.note;
+            count++;
+        }
+    }
+
+    return (total / count);
 }
 void statsMenu()
 {
@@ -99,6 +123,9 @@ void statsMenu()
     }
     else if (choix == 4)
     {
+        printf("Enter un departement:\n(1): informatique\n(2): mechanique\n(3): resource_humaine\n(4): juridique\nChoisir: ");
+        scanf("%d", &select);
+        printf("la moyenne General de departement %s est %.2f\n", departments[select - 1], moyennePardeptment(departments[select - 1]));
     }
     /*else if (choix == 5)
     {
