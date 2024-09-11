@@ -70,18 +70,6 @@ void rechercheOps(int choix) {
             printf("4: juridique\n");
             printf("Enter votre Selection: ");
             scanf("%d", &select);
-            /*{
-                clear_buffer();
-                continue;
-            }
-            // BUG: Verifie le max index dans le tableau
-            if (select <= 0)
-            {
-                printf("Selection incorrect\n");
-                clear_buffer();
-                continue;
-            }*/
-        // BUG: index departement Control
-        printf("le nombre des etudiant dans %s est %d\n",  departments[select - 1], searchBydeprtement(departments[select - 1]));
+            printf("le nombre des etudiant dans %s est %d\n",  departments[select - 1], searchBydeprtement(departments[select - 1]));
     }
 }

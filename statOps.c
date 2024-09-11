@@ -222,12 +222,11 @@ void statsMenu()
     }
     else if (choix == 5)
     {
-        printf("Enter la note Seuil: ");
+        printf("Enter la note de Seuil: ");
         scanf("%f", &seuil);
         etudiantParseuil(seuil);
     }else if (choix == 6)
     {   
-        printf("I'm inside 6 choix\n");
         topthree();
     } else if (choix == 7) {
         totalresutePardept();
