@@ -19,7 +19,7 @@ int searchBydeprtement(char departement[])
 
         if (strcmp(etudiant.departement, departement) == 0)
         {
-            printf("%s\n", departement);
+            printf("found one\n");
             counteur++;
         }
     }
@@ -30,13 +30,29 @@ int searchBydeprtement(char departement[])
 
 
 void rechercheOps(int choix) {
+    int select;
     char *departments[] = {INFO, MECH, RH, JUR};
     if (choix == 1) {
         // function recherche par nom
     } else if (choix == 2){
-        printf("Entree la nouveau departement:\n(1): informatique\n(2): mechanique\n(3): resource_humaine\n(4): juridique\nChoisir: ");
-        scanf("%d", &choix);
+            printf("1: informatique\n");
+            printf("2: mechanique\n");
+            printf("3: resource humaine\n");
+            printf("4: juridique\n");
+            printf("Enter votre Selection: ");
+            scanf("%d", &select);
+            /*{
+                clear_buffer();
+                continue;
+            }
+            // BUG: Verifie le max index dans le tableau
+            if (select <= 0)
+            {
+                printf("Selection incorrect\n");
+                clear_buffer();
+                continue;
+            }*/
         // BUG: index departement Control
-        searchBydeprtement(departments[choix - 1]);
-    }   
+        printf("le nombre des etudiant dans %s est %d\n",  departments[select - 1], searchBydeprtement(departments[select - 1]));
+    }
 }

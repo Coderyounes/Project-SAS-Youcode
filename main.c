@@ -85,18 +85,14 @@ int main()
             affichertous();
             break;
         case 5:
-            printf("1: informatique\n");
-            printf("2: mechanique\n");
-            printf("3: resource humaine\n");
-            printf("4: juridique\n");
-            printf("Enter votre Selection: ");
-            if (scanf("%d", &select) != 1)
+            printf("1: recherche par nom d'etudiant(s)\n2: recherche par departement\n");
+            printf("Entree Votre choix: ");
+            if (scanf("%d", &choix) != 1)
             {
                 clear_buffer();
                 continue;
             }
-            // BUG: Verifie le max index dans le tableau
-            if (select <= 0)
+            if (choix < 1)
             {
                 printf("Selection incorrect\n");
                 clear_buffer();
