@@ -23,17 +23,7 @@ int main()
             printf("3: resource humaine\n");
             printf("4: juridique\n");
             printf("Enter votre Selection: ");
-            if (scanf("%d", &select) != 1)
-            {
-                clear_buffer();
-                continue;
-            }
-            if (select <= 0)
-            {
-                printf("Selection incorrect\n");
-                clear_buffer();
-                continue;
-            }
+            scanf("%d", &select);
             ajouteEtudiant(departments[select - 1]);
             break;
         case 2:
@@ -42,17 +32,7 @@ int main()
         case 3:
             affichertous();
             printf("Quel etudiant vous voulez modifie? ( Entree le id)");
-            if (scanf("%d", &id) != 1)
-            {
-                clear_buffer();
-                continue;
-            }
-            if (id < 1)
-            {
-                printf("Selection incorrect\n");
-                clear_buffer();
-                continue;
-            }
+            scanf("%d", &id);
             printf("Entre le nouveau Nom: ");
             scanf("%s", temp.nom);
             printf("Entre le nouveau prenom: ");
@@ -70,34 +50,14 @@ int main()
         case 4:
             affichertous();
             printf("Quel letudiant que vous voulez supprimer: ");
-            if (scanf("%d", &id) != 1)
-            {
-                clear_buffer();
-                continue;
-            }
-            if (id < 1)
-            {
-                printf("Selection incorrect\n");
-                clear_buffer();
-                continue;
-            }
+            scanf("%d", &id);
             removeEtudiant(id);
             affichertous();
             break;
         case 5:
             printf("1: recherche par nom d'etudiant(s)\n2: recherche par departement\n");
             printf("Entree Votre choix: ");
-            if (scanf("%d", &choix) != 1)
-            {
-                clear_buffer();
-                continue;
-            }
-            if (choix < 1)
-            {
-                printf("Selection incorrect\n");
-                clear_buffer();
-                continue;
-            }
+            scanf("%d", &choix);
             rechercheOps(choix);
             break;
         case 6:

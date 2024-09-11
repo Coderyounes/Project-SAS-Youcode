@@ -1,8 +1,8 @@
-1 bousfiha younes 1996 informatique 15.25
-2 hanafi mohamed 2000 mechanique 11.25
-3 chamakh hamza 12-05-2024 informatique 19.56
-4 abassi azziz 1990 mechanique 16.25
-5 zehrane hamza 1985 resource_humain 12.58
-6 balkani mostafa 1998 informatique 9.65
-7 chababi hamza 1995 informatique 20.00
-8 mandak youssef 1997 mechanique 0.00
+0 bousfiha younes 1996 informatique 15.25
+1 hanafi mohamed 2000 mechanique 11.25
+2 chamakh hamza 12-05-2024 informatique 19.56
+3 abassi azziz 1990 mechanique 16.25
+4 zehrane hamza 1985 resource_humain 12.58
+5 balkani mostafa 1998 informatique 9.65
+6 chababi hamza 1995 informatique 20.00
+7 mandak youssef 1997 mechanique 0.00
