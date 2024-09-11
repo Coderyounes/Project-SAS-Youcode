@@ -156,6 +156,43 @@ void topthree() {
     fclose(fp);
 }
 
+void totalresutePardept() {
+    char buffer[MAX];
+    int info = 0, mech = 0, rh = 0, jur = 0;
+    float seuil = 10.00;
+    Etudiant_s etudiant;
+    FILE *fp;
+
+    fp = fileops(file, "r");
+
+    while(fgets(buffer, sizeof(buffer), fp) != NULL) {
+        sscanf(buffer, "%d %s %s %s %s %f", &etudiant.uniqueId,
+                                            etudiant.nom,
+                                            etudiant.prenom,
+                                            etudiant.naissance,
+                                            etudiant.departement,
+                                            &etudiant.note);
+    if(etudiant.note >= seuil) {
+        printf("Hello inside condition\n");
+        if(strcmp(etudiant.departement, INFO)) {
+            info++;
+        } else if (strcmp(etudiant.departement, MECH)) {
+            mech++;
+        } else if (strcmp(etudiant.departement, RH)) {
+            rh++;
+        } else if (strcmp(etudiant.departement, JUR)) {
+            jur++;
+        }
+    }
+    }
+    printf("Number des etudiant Success Pour la departement %s est %d\n", INFO, info);
+    printf("Number des etudiant Success Pour la departement %s est %d\n", MECH, mech);
+    printf("Number des etudiant Success Pour la departement %s est %d\n", RH, rh);
+    printf("Number des etudiant Success Pour la departement %s est %d\n", JUR, jur);
+
+    fclose(fp);  
+}
+
 void statsMenu()
 {
     int choix, select, total;
@@ -200,7 +237,7 @@ void statsMenu()
     {   
         printf("I'm inside 6 choix\n");
         topthree();
-    } /*else if (choix == 7) {
-
-    }*/
+    } else if (choix == 7) {
+        totalresutePardept();
+    }
 }
