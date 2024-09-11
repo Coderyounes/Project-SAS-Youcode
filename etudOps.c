@@ -19,6 +19,7 @@ void ajouteEtudiant(char departemet[])
     {
         strcpy(etudiant.departement, departemet);
         sscanf(buffer, "%s %s %s %f", etudiant.nom, etudiant.prenom, etudiant.naissance, &etudiant.note);
+        etudiant.note = handlenotes(etudiant.note);
     }
     fprintf(fp, "%d %s %s %s %s %.2f\n", etudiant.uniqueId,
             etudiant.nom,

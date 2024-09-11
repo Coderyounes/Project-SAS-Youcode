@@ -46,6 +46,19 @@ void printArray(Etudiant_s etudiants[], int lines) {
     }
 }
 
+int handlenotes(float note) {
+    float newnote;
+    float maxnote = 20.00;
+    float minnote = 00.00;
+    if (note > maxnote) {
+        newnote = maxnote;
+    }
+    if (note < minnote) {
+        newnote = minnote;
+    }
+    return newnote;
+}
+
 void triforTop(Etudiant_s etudiants[], int lines) {
     int i, j;
     Etudiant_s temp;

@@ -4,3 +4,5 @@
 4 abassi azziz 1990 mechanique 16.25
 5 zehrane hamza 1985 resource_humain 12.58
 6 balkani mostafa 1998 informatique 9.65
+7 chababi hamza 1995 informatique 20.00
+8 mandak youssef 1997 mechanique 0.00
