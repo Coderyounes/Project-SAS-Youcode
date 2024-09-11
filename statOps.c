@@ -181,19 +181,19 @@ void totalresutePardept()
                &etudiant.note);
         if (etudiant.note >= seuil)
         {
-            if (strcmp(etudiant.departement, INFO))
+            if (strcmp(etudiant.departement, INFO) == 0)
             {
                 info++;
             }
-            else if (strcmp(etudiant.departement, MECH))
+            else if (strcmp(etudiant.departement, MECH) == 0)
             {
                 mech++;
             }
-            else if (strcmp(etudiant.departement, RH))
+            else if (strcmp(etudiant.departement, RH) == 0)
             {
                 rh++;
             }
-            else if (strcmp(etudiant.departement, JUR))
+            else if (strcmp(etudiant.departement, JUR) == 0)
             {
                 jur++;
             }

@@ -14,7 +14,7 @@ void ajouteEtudiant(char departemet[])
     getchar();
 
     etudiant.uniqueId = lines + 1;
-    printf("Enter le nom, le prenom, la date de naissance et la note(separe par espace): ");
+    printf("Enter le nom, le prenom, la date de naissance(DD/MM/YY) et la note(separe par espace): ");
     if (fgets(buffer, sizeof(buffer), stdin) != NULL)
     {
         strcpy(etudiant.departement, departemet);

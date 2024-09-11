@@ -1,3 +1,9 @@
-1 bousfiha younes 1998 informatique 12.98
-2 test test 1996 informatique 12.36
-3 mechanique mechanique 1992 mechanique 12.85
+1 bousfiha younes 12/03/1996 informatique 7.25
+2 hanafi mohamed 03/03/2000 mechanique 14.95
+3 labid abdeillah 03/04/1985 juridique 19.95
+4 marchoube manar 12/04/1990 resource_humain 14.75
+5 aitdahram imran 07/01/2003 informatique 9.75
+6 elomrani chaima 28/08/2005 mechanique 17.25
+7 zerhoun omar 19/06/1992 juridique 7.95
+8 khoumassi oumaima 06/10/2000 resource_humain 8.25
+9 baoud ismail 04/09/1995 mechanique 7.63
