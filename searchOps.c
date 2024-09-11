@@ -27,3 +27,16 @@ int searchBydeprtement(char departement[])
 
     return counteur;
 }
+
+
+void rechercheOps(int choix) {
+    char *departments[] = {INFO, MECH, RH, JUR};
+    if (choix == 1) {
+        // function recherche par nom
+    } else if (choix == 2){
+        printf("Entree la nouveau departement:\n(1): informatique\n(2): mechanique\n(3): resource_humaine\n(4): juridique\nChoisir: ");
+        scanf("%d", &choix);
+        // BUG: index departement Control
+        searchBydeprtement(departments[choix - 1]);
+    }   
+}

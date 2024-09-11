@@ -85,7 +85,24 @@ int main()
             affichertous();
             break;
         case 5:
-            // recherche
+            printf("1: informatique\n");
+            printf("2: mechanique\n");
+            printf("3: resource humaine\n");
+            printf("4: juridique\n");
+            printf("Enter votre Selection: ");
+            if (scanf("%d", &select) != 1)
+            {
+                clear_buffer();
+                continue;
+            }
+            // BUG: Verifie le max index dans le tableau
+            if (select <= 0)
+            {
+                printf("Selection incorrect\n");
+                clear_buffer();
+                continue;
+            }
+            rechercheOps(choix);
             break;
         case 6:
             // tri sous menu

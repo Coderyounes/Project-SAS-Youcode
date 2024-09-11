@@ -30,6 +30,8 @@ void removeEtudiant(int id);
 int totaletudiant();
 void totalParDep();
 float moyenneGlobal();
+
+void rechercheOps(int choix);
 int searchBydeprtement(char departement[]);
 
 void statsMenu();
