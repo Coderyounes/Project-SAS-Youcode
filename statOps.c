@@ -165,7 +165,6 @@ void totalresutePardept() {
                                             etudiant.departement,
                                             &etudiant.note);
     if(etudiant.note >= seuil) {
-        printf("Hello inside condition\n");
         if(strcmp(etudiant.departement, INFO)) {
             info++;
         } else if (strcmp(etudiant.departement, MECH)) {

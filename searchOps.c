@@ -45,7 +45,6 @@ int searchBydeprtement(char departement[])
 
         if (strcmp(etudiant.departement, departement) == 0)
         {
-            printf("found one\n");
             counteur++;
         }
     }
@@ -60,7 +59,7 @@ void rechercheOps(int choix) {
     char name[MAX];
     char *departments[] = {INFO, MECH, RH, JUR};
     if (choix == 1) {
-        printf("Enter le nom d'etudiant a recherche:");
+        printf("Enter le nom d'etudiant a recherche: ");
         scanf("%s", name);
         searchByname(name);
     } else if (choix == 2){

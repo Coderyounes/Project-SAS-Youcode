@@ -1,6 +1,6 @@
 1 bousfiha younes 1996 informatique 15.25
-2 bousfiha khalil 1989 mechanique 13.25
-3 hello hello 12/03/1996 informatique 9.85
-4 chamakh hamza 12-05-2024 informatique 19.56
-5 abassi azziz 1990 mechanique 16.25
-6 zehrane hamza 1985 resource_humain 12.58
+2 hanafi mohamed 2000 mechanique 11.25
+3 chamakh hamza 12-05-2024 informatique 19.56
+4 abassi azziz 1990 mechanique 16.25
+5 zehrane hamza 1985 resource_humain 12.58
+6 balkani mostafa 1998 informatique 9.65
