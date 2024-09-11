@@ -11,32 +11,38 @@ int totaletudiant()
     return count;
 }
 
-int totalBydeprtement(char departement[])
-{
+void totalParDep() {
     char buffer[MAX];
-    int counteur = 0;
+    int info = 0, mech = 0, rh = 0, jur = 0;
     Etudiant_s etudiant;
     FILE *fp;
 
     fp = fileops(file, "r");
-    while (fgets(buffer, sizeof(buffer), fp) != NULL)
-    {
-        sscanf(buffer, "%d %s %s %s %s %f", &etudiant.uniqueId,
-               etudiant.nom,
-               etudiant.prenom,
-               etudiant.naissance,
-               etudiant.departement,
-               &etudiant.note);
 
-        if (strcmp(etudiant.departement, departement) == 0)
-        {
-            printf("%s\n", departement);
-            counteur++;
+    while(fgets(buffer, sizeof(buffer), fp) != NULL) {
+        sscanf(buffer, "%d %s %s %s %s %d", &etudiant.uniqueId,
+                                            etudiant.nom,
+                                            etudiant.prenom,
+                                            etudiant.naissance,
+                                            etudiant.departement,
+                                            &etudiant.note);
+        if(strcmp(etudiant.departement, INFO)) {
+            info++;
+        } else if (strcmp(etudiant.departement, MECH)) {
+            mech++;
+        } else if (strcmp(etudiant.departement, RH)) {
+            rh++;
+        } else if (strcmp(etudiant.departement, JUR)) {
+            jur++;
         }
     }
+    printf("Number des etudiant Pour la departement %s est %d\n", INFO, info);
+    printf("Number des etudiant Pour la departement %s est %d\n", MECH, mech);
+    printf("Number des etudiant Pour la departement %s est %d\n", RH, rh);
+    printf("Number des etudiant Pour la departement %s est %d\n", JUR, jur);
+
     fclose(fp);
 
-    return counteur;
 }
 
 float moyenneGlobal()
@@ -91,6 +97,11 @@ float moyennePardeptment(char departement[])
 
     return (total / count);
 }
+
+float noteParseuil(char departement[]) {
+
+}
+
 void statsMenu()
 {
     int choix, select, total;
@@ -113,9 +124,7 @@ void statsMenu()
     }
     else if (choix == 2)
     {
-        printf("Enter un departement:\n(1): informatique\n(2): mechanique\n(3): resource_humaine\n(4): juridique\nChoisir: ");
-        scanf("%d", &select);
-        printf("le nombre des etudiant sur %s departement est %d \n", departments[select - 1], totalBydeprtement(departments[select - 1]));
+        totalParDep();
     }
     else if (choix == 3)
     {
@@ -127,9 +136,10 @@ void statsMenu()
         scanf("%d", &select);
         printf("la moyenne General de departement %s est %.2f\n", departments[select - 1], moyennePardeptment(departments[select - 1]));
     }
-    /*else if (choix == 5)
+    else if (choix == 5)
     {
-    } else if (choix == 6) {
+        // affichage des etudiant ayant u
+    } /*else if (choix == 6) {
 
     } else if (choix == 7) {
 
