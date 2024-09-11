@@ -125,6 +125,39 @@ float etudiantParseuil(float seuil) {
     fclose(fp);
 }
 
+void topthree() {
+    printf("I'm inside Topthree\n");
+    char buffer[MAX];
+    int lines, i = 0, j;
+    Etudiant_s etudiants[MAX];
+    FILE *fp;
+
+    fp = fileops(file, "r");
+    lines = countlines(fp);
+    while(fgets(buffer, sizeof(buffer), fp) != NULL) {
+        sscanf(buffer, "%d %s %s %s %s %f", &etudiants[i].uniqueId,
+                                            etudiants[i].nom,
+                                            etudiants[i].prenom,
+                                            etudiants[i].naissance,
+                                            etudiants[i].departement,
+                                            &etudiants[i].note);
+                                            i++;
+    }
+    triHightoLow(etudiants, lines);
+    printf("\tThe Top 3 Student are: \n");
+    for (j = 0; j < 3; j++) {
+        printf("%d %s %s %s %s %d\n", etudiants[j].uniqueId,
+                                        etudiants[j].nom,
+                                        etudiants[j].prenom,
+                                        etudiants[j].naissance,
+                                        etudiants[j].departement,
+                                        etudiants[j].naissance,
+                                        etudiants[j].note);
+    }
+
+    fclose(fp);
+}
+
 void statsMenu()
 {
     int choix, select, total;
@@ -165,9 +198,11 @@ void statsMenu()
         printf("Enter la note Seuil: ");
         scanf("%f", &seuil);
         etudiantParseuil(seuil);
-    } /*else if (choix == 6) {
-
-    } else if (choix == 7) {
+    }else if (choix == 6)
+    {   
+        printf("I'm inside 6 choix\n");
+        topthree();
+    } /*else if (choix == 7) {
 
     }*/
 }

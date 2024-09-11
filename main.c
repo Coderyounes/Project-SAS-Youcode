@@ -101,7 +101,7 @@ int main()
             rechercheOps(choix);
             break;
         case 6:
-            // tri sous menu
+            //triMenu();
             break;
         case 7:
             statsMenu();

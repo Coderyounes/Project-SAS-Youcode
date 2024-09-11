@@ -33,10 +33,14 @@ int totaletudiant();
 void totalParDep();
 float moyenneGlobal();
 float etudiantParseuil(float seuil);
+void topthree();
 
 void rechercheOps(int choix);
 int searchBydeprtement(char departement[]);
 void searchByname(char name[]);
+
+void triMenu();
+void triHightoLow(Etudiant_s etudiants[], int lines);
 
 FILE *fileops(char filename[], char mode[]);
 
