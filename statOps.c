@@ -48,6 +48,8 @@ void statsMenu()
     printf("3: afficher les etudients ayant le moyene general sup d'un seuil\n");
     printf("4: afficher les 3 etudiants ayant la meilleur notes\n");
     printf("5: afficher le nombre des etudiant reussite\n");
+    printf("0: retour to menu Pricipal\n");
+    printf("Enter Votre choix: ");
     scanf("%d", &choix);
 
     if (choix == 1)
