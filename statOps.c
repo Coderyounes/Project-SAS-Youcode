@@ -143,15 +143,7 @@ void topthree() {
                                             &etudiants[i].note);
                                             i++;
     }
-    triHightoLow(etudiants, i);
-    for (j = 0; j < 3; j++) {
-        printf("%d %s %s %s %s %.2f\n", etudiants[j].uniqueId,
-                                        etudiants[j].nom,
-                                        etudiants[j].prenom,
-                                        etudiants[j].naissance,
-                                        etudiants[j].departement,
-                                        etudiants[j].note);
-    }
+    triforTop(etudiants, i);
     free(etudiants);
     fclose(fp);
 }

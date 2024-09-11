@@ -41,11 +41,13 @@ void searchByname(char name[]);
 
 void triMenu();
 void triHightoLow(Etudiant_s etudiants[], int lines);
-
+void triAaZ(Etudiant_s etudiants[], int lines);
+void triZaA(Etudiant_s etudiants[], int lines);
 FILE *fileops(char filename[], char mode[]);
 
 int countlines(FILE *fp);
 void Welcome();
 void clear_buffer();
-
+void printArray(Etudiant_s etudiants[], int lines);
+void triforTop(Etudiant_s etudiants[], int lines);
 #endif

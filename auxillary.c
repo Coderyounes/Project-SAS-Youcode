@@ -33,3 +33,30 @@ int countlines(FILE *fp)
     rewind(fp);
     return count;
 }
+
+void printArray(Etudiant_s etudiants[], int lines) {
+    int k;
+    for (k = 0; k < lines; k++) {
+        printf("%d %s %s %s %s %.2f\n", etudiants[k].uniqueId,
+                                    etudiants[k].nom,
+                                    etudiants[k].prenom,
+                                    etudiants[k].naissance,
+                                    etudiants[k].departement,
+                                    etudiants[k].note);
+    }
+}
+
+void triforTop(Etudiant_s etudiants[], int lines) {
+    int i, j;
+    Etudiant_s temp;
+    for(i = 0; i < lines; i++) {
+        for (j = 0; j < lines - i - 1; j++) {
+            if(etudiants[j].note < etudiants[j + 1].note) {
+                temp = etudiants[j];
+                etudiants[j] = etudiants[j + 1];
+                etudiants[j + 1] = temp;
+            }
+        }
+    }
+    printArray(etudiants, 3);
+}
