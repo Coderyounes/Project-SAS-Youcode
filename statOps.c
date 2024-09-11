@@ -98,13 +98,37 @@ float moyennePardeptment(char departement[])
     return (total / count);
 }
 
-float noteParseuil(char departement[]) {
+float etudiantParseuil(float seuil) {
+    char buffer[MAX];
+    Etudiant_s etudiant;
+    FILE *fp;
 
+    fp = fileops(file, "r");
+
+    while(fgets(buffer, sizeof(buffer), fp)) {
+        sscanf(buffer, "%d %s %s %s %s %f", &etudiant.uniqueId,
+                                            etudiant.nom,
+                                            etudiant.prenom,
+                                            etudiant.naissance,
+                                            etudiant.departement,
+                                            &etudiant.note);
+
+        if (etudiant.note >= seuil) {
+            printf("%d %s %s %s %s %.2f\n", etudiant.uniqueId,
+                                        etudiant.nom,
+                                        etudiant.prenom,
+                                        etudiant.naissance,
+                                        etudiant.departement,
+                                        etudiant.note);
+        }
+    }
+    fclose(fp);
 }
 
 void statsMenu()
 {
     int choix, select, total;
+    float seuil;
     char *departments[] = {INFO, MECH, RH, JUR};
     printf("1: afficher le nombre total des etudiant\n");
     printf("2: afficher le nombre des etudiant sur un departement\n");
@@ -138,7 +162,9 @@ void statsMenu()
     }
     else if (choix == 5)
     {
-        // affichage des etudiant ayant u
+        printf("Enter la note Seuil: ");
+        scanf("%f", &seuil);
+        etudiantParseuil(seuil);
     } /*else if (choix == 6) {
 
     } else if (choix == 7) {

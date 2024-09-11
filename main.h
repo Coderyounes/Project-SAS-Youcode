@@ -27,14 +27,17 @@ void ajouteEtudiant(char departemet[]);
 void affichertous();
 void modification(int id, Etudiant_s temp);
 void removeEtudiant(int id);
+
+void statsMenu();
 int totaletudiant();
 void totalParDep();
 float moyenneGlobal();
+float etudiantParseuil(float seuil);
 
 void rechercheOps(int choix);
 int searchBydeprtement(char departement[]);
 void searchByname(char name[]);
-void statsMenu();
+
 FILE *fileops(char filename[], char mode[]);
 
 int countlines(FILE *fp);
