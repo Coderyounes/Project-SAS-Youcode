@@ -1,5 +1,31 @@
 #include "main.h"
 
+void searchByname(char name[]) {
+    char buffer[MAX];
+    Etudiant_s etudiant;
+    FILE *fp;
+
+    fp = fileops(file, "r");
+
+    while(fgets(buffer, sizeof(buffer), fp) != NULL) {
+        sscanf(buffer, "%d %s %s %s %s %f", &etudiant.uniqueId,
+                                            etudiant.nom,
+                                            etudiant.prenom,
+                                            etudiant.naissance,
+                                            etudiant.departement,
+                                            &etudiant.note);
+        if (strcmp(etudiant.nom, name) == 0) {
+            printf("FOUND: %d %s %s %s %s %.2f\n", etudiant.uniqueId,
+                                                etudiant.nom,
+                                                etudiant.prenom,
+                                                etudiant.naissance,
+                                                etudiant.departement,
+                                                etudiant.note);
+        }
+    }
+    fclose(fp);
+}
+
 int searchBydeprtement(char departement[])
 {
     char buffer[MAX];
@@ -31,9 +57,12 @@ int searchBydeprtement(char departement[])
 
 void rechercheOps(int choix) {
     int select;
+    char name[MAX];
     char *departments[] = {INFO, MECH, RH, JUR};
     if (choix == 1) {
-        // function recherche par nom
+        printf("Enter le nom d'etudiant a recherche:");
+        scanf("%s", name);
+        searchByname(name);
     } else if (choix == 2){
             printf("1: informatique\n");
             printf("2: mechanique\n");

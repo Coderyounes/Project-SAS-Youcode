@@ -33,7 +33,7 @@ float moyenneGlobal();
 
 void rechercheOps(int choix);
 int searchBydeprtement(char departement[]);
-
+void searchByname(char name[]);
 void statsMenu();
 FILE *fileops(char filename[], char mode[]);
 
