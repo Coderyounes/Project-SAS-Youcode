@@ -29,6 +29,7 @@ void modification(int id, Etudiant_s temp);
 void removeEtudiant(int id);
 int totaletudiant();
 int totalBydeprtement(char departement[]);
+float moyenneGlobal();
 void statsMenu();
 FILE *fileops(char filename[], char mode[]);
 
