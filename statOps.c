@@ -126,12 +126,13 @@ float etudiantParseuil(float seuil) {
 }
 
 void topthree() {
-    int i = 0, j;
+    int i = 0, j, lines;
     char buffer[MAX];
-    Etudiant_s etudiants[100]; // when initialize with MAX program Crassh
     FILE *fp;
 
     fp = fileops(file, "r");
+    lines = countlines(fp);
+    Etudiant_s *etudiants = malloc(sizeof(Etudiant_s) * lines);
 
     while(fgets(buffer, sizeof(buffer), fp) != NULL) {
         sscanf(buffer, "%d %s %s %s %s %f", &etudiants[i].uniqueId,
@@ -151,6 +152,8 @@ void topthree() {
                                         etudiants[j].departement,
                                         etudiants[j].note);
     }
+    free(etudiants);
+    fclose(fp);
 }
 
 void statsMenu()
